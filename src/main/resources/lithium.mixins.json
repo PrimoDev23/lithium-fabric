@@ -81,6 +81,7 @@
     "gen.cached_generator_settings.SurfaceChunkGeneratorMixin",
     "gen.chunk_region.ChunkRegionMixin",
     "gen.fast_island_noise.SurfaceChunkGeneratorMixin",
+    "gen.fast_biome_array.ChunkStatusMixin",
     "gen.fast_island_noise.TheEndBiomeSourceMixin",
     "gen.fast_layer_sampling.CachingLayerContextMixin",
     "gen.fast_layer_sampling.ScaleLayerMixin",
