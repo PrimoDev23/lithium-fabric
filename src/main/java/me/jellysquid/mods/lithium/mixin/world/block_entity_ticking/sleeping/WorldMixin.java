@@ -41,7 +41,7 @@ public abstract class WorldMixin implements BlockEntitySleepTracker {
     private MaskedTickingBlockEntityList<BlockEntity> tickingBlockEntities$lithium;
 
     @Inject(method = "<init>", at = @At("RETURN"))
-    private void reinit(MutableWorldProperties properties, RegistryKey<World> registryKey, DimensionType dimensionType,
+    private void reinit(MutableWorldProperties properties, RegistryKey<World> registryKey, RegistryKey<World> registryKey2, DimensionType dimensionType,
                         Supplier<Profiler> supplier, boolean bl, boolean bl2, long l, CallbackInfo ci) {
         this.tickingBlockEntities$lithium = new MaskedTickingBlockEntityList<>(this.tickingBlockEntities, blockEntity -> ((SleepingBlockEntity) blockEntity).canTickOnSide(this.isClient()));
         this.tickingBlockEntities = tickingBlockEntities$lithium;
