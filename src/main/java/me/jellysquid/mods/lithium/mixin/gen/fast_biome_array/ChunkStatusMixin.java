@@ -28,7 +28,7 @@ public class ChunkStatusMixin {
     @Inject(method = "method_16570", at = @At("HEAD"), remap = false, cancellable = true)
     private static void populateBiomes(ServerWorld world, ChunkGenerator generator, List<Chunk> surroundingChunks, Chunk chunk, CallbackInfo ci) {
         if (world.getDimension().getBiomeAccessType() instanceof HorizontalVoronoiBiomeAccessType) {
-            ((ProtoChunk) chunk).setBiomes(new HorizontalBiomeArray(world.getRegistryManager().get(Registry.BIOME_KEY), chunk.getPos(), generator.getBiomeSource()));
+            ((ProtoChunk) chunk).setBiomes(new HorizontalBiomeArray(chunk.getPos(), generator.getBiomeSource()));
 
             ci.cancel();
         }

@@ -14,8 +14,8 @@ public class HorizontalBiomeArray extends BiomeArray {
     private static final int HORIZONTAL_SECTION_COUNT = (int)Math.round(Math.log(16.0D) / Math.log(2.0D)) - 2;
     private static final int HORIZONTAL_BITS = HORIZONTAL_SECTION_COUNT * 2;
 
-    public HorizontalBiomeArray(IndexedIterable<Biome> indexedIterable, ChunkPos pos, BiomeSource source) {
-        super(indexedIterable, sampleBiomes(pos, source));
+    public HorizontalBiomeArray(ChunkPos pos, BiomeSource source) {
+        super(sampleBiomes(pos, source));
     }
 
     private static Biome[] sampleBiomes(ChunkPos pos, BiomeSource source) {
